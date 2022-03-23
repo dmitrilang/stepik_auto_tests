@@ -2,11 +2,10 @@ from selenium import webdriver
 import time
 
 try:
-    #link = "http://suninjuly.github.io/registration1.html"
-    link = "http://suninjuly.github.io/registration2.html"
-    browser = webdriver.Chrome('/Users/d.lang/chromedriver')
+    link = "http://suninjuly.github.io/registration1.html"
+    #link = "http://suninjuly.github.io/registration2.html"
+    browser = webdriver.Chrome()
     browser.get(link)
-
     # Ваш код, который заполняет обязательные поля
     input1 = browser.find_element_by_tag_name("input[placeholder='Input your first name']")
     input1.send_keys("Ivan")
@@ -21,7 +20,7 @@ try:
     # Отправляем заполненную форму
     button = browser.find_element_by_css_selector("button.btn")
     button.click()
-    
+    h1 = browser find
     # Проверяем, что смогли зарегистрироваться
     # ждем загрузки страницы
     time.sleep(1)
